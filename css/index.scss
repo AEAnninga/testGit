@@ -1,0 +1,116 @@
+@use "../css/reset";
+@use "../css/constants";
+
+@mixin listItemColor($backgroundColor) {
+    background: $backgroundColor;
+    border-radius: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+@keyframes menu {
+    from{transform: translateX(-400px)}
+    to{transform: translateX(0px)}
+}
+
+body {
+    font-family: 'open sans';
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+    background: $homeColor;
+    .homeColor {
+        background: $homeColor;
+    }
+    
+    .greenColor {
+        background: $greenColor;
+    }
+    
+    .orangeColor {
+        background: $orangeColor;
+    }
+    
+    .purpleColor {
+        background: $purpleColor;
+    }
+    
+    .blueColor {
+        background: $blueColor;
+    }
+}
+
+.toggleMenu {
+    visibility: hidden;
+}
+
+.transition {
+    animation: 1s menu forwards;
+}
+
+.toggleImage {
+    display: none;
+}
+
+.nav__btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row nowrap;
+    p {
+        align-self: center;
+        justify-self: center;
+        color: white;
+        font-size: 10em;
+    }
+}
+
+img.hamburger {
+    width: 200px;
+    height: 200px;
+    padding: 25px;
+}
+
+#close img {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+}
+
+.nav__hamburger--content {    
+    padding: 25px;
+    display: flex;
+    flex-flow: column nowrap;        
+    width: 400px;
+    gap: 5px;    
+    list-style: none;
+    li {
+        display: flex;
+        flex-flow: row nowrap; 
+        justify-content: space-between;   
+        align-items: center;
+        label {
+            margin-left: 50px;
+        }
+        input {
+            margin-right: 50px;
+            color: purple;
+        }
+    }    
+    #home {
+        @include listItemColor ($homeColor);
+    }
+    #green {
+        @include listItemColor($greenColor);
+    }
+    #orange {
+        @include listItemColor($orangeColor);
+    }
+    #purple {
+        @include listItemColor($purpleColor);
+    }
+    #blue {
+        @include listItemColor($blueColor);
+    }    
+}

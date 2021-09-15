@@ -1,0 +1,158 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "open sans";
+  font-weight: bold;
+  font-size: 3em;
+  color: white;
+  background: #d3d2d2;
+}
+
+@-webkit-keyframes menu {
+  from {
+    transform: translateX(-400px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes menu {
+  from {
+    transform: translateX(-400px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes menu2 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-400px);
+  }
+}
+@keyframes menu2 {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-400px);
+  }
+}
+.toggleMenu {
+  visibility: hidden;
+}
+
+.transition {
+  -webkit-animation: 1s menu forwards;
+          animation: 1s menu forwards;
+}
+
+.toggleImage {
+  display: none;
+}
+
+.homeColor {
+  background: #d3d2d2;
+}
+
+.greenColor {
+  background: #6de26d;
+}
+
+.orangeColor {
+  background: #ffc558;
+}
+
+.purpleColor {
+  background: #ee54ee;
+}
+
+.blueColor {
+  background: #80bfff;
+}
+
+.nav__btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.nav__btn p {
+  align-self: center;
+  justify-self: center;
+  color: white;
+  font-size: 10em;
+}
+
+img.hamburger {
+  width: 200px;
+  height: 200px;
+  padding: 25px;
+}
+
+#close img {
+  width: 100px;
+  height: 100px;
+  padding: 25px;
+}
+
+.nav__hamburger--content {
+  padding: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 400px;
+  gap: 5px;
+  list-style: none;
+}
+.nav__hamburger--content li {
+  line-height: 150px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__hamburger--content li label {
+  margin-left: 50px;
+}
+.nav__hamburger--content li input {
+  margin-right: 50px;
+  color: purple;
+}
+.nav__hamburger--content #home {
+  background: #d3d2d2;
+  border-radius: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.nav__hamburger--content #green {
+  background: #6de26d;
+  border-radius: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.nav__hamburger--content #orange {
+  background: #ffc558;
+  border-radius: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.nav__hamburger--content #purple {
+  background: #ee54ee;
+  border-radius: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.nav__hamburger--content #blue {
+  background: #80bfff;
+  border-radius: 10px;
+  padding-left: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
